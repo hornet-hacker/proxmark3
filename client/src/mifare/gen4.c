@@ -66,7 +66,7 @@ static int mfG4ExCommand(uint8_t cmd, uint8_t *pwd, uint8_t *data, size_t datale
     if (WaitForResponseTimeout(CMD_ACK, &resp, 1500)) {
         if (resp.oldarg[0] != 2) {
             if (verbose) PrintAndLogEx(ERR, "No card in the field.");
-            return PM3_ETIMEOUT;
+            //return PM3_ETIMEOUT;
         }
 
         iso14a_card_select_t card;
